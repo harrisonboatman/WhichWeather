@@ -1,6 +1,9 @@
 var submitBtn = document.querySelector('#submitBtn');
 var weatherNow = document.querySelector('#city');
 var today = dayjs();
+var temp = document.querySelector('#temp');
+var wind = document.querySelector('#wind');
+var humidity = document.querySelector('#humidity');
 
 function handleSearchForm() {
     
@@ -26,8 +29,15 @@ function getWeather(lat,lon){
             console.log(weather);
             console.log(weather.list[0].main.temp);
             var farTemp = weather.list[0].main.temp *(9/5) - 459.67;
+            var windNum = weather.list[0].wind.speed;
+            var humidityNum = weather.list[0].main.humidity;
+            farTemp = Math.trunc(farTemp);
             console.log(farTemp);
             weatherNow.textContent =  weather.city.name + " on " + today.format("MMM D, YYYY");
+            temp.textContent = "Temp: " + farTemp + "°F";
+            wind.textContent = "Wind Speeds: " + windNum + " MPH";
+            humidity.textContent = "Humidity of: " + humidityNum + " %";
+
         })
 
 }
