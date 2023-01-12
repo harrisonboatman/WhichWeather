@@ -107,7 +107,7 @@ function getWeather(lat,lon){
 }
 
 function getCoordinates (place) {
-    var geoAPI = "http://api.openweathermap.org/geo/1.0/direct?q=" + place + "&limit=1&appid=d4c1369a9ccf7f44a319092d1e4c64b7"
+    var geoAPI = "https://api.openweathermap.org/geo/1.0/direct?q=" + place + "&limit=1&appid=d4c1369a9ccf7f44a319092d1e4c64b7"
     console.log(geoAPI);
 
     fetch(geoAPI)
