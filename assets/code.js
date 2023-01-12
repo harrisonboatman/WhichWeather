@@ -19,6 +19,17 @@ var humidity4 = document.querySelector('#day4humidity');
 var temp5 = document.querySelector('#day5temp');
 var wind5 = document.querySelector('#day5wind');
 var humidity5 = document.querySelector('#day5humidity');
+var day1 = document.querySelector('#day1');
+var day2 = document.querySelector('#day2');
+var day3 = document.querySelector('#day3');
+var day4 = document.querySelector('#day4');
+var day5 = document.querySelector('#day5');
+var nextday1 = today.add(1,'day');
+var nextday2 = today.add(2,'day');
+var nextday3 = today.add(3,'day');
+var nextday4 = today.add(4,'day');
+var nextday5 = today.add(5,'day');
+console.log(test);
 
 function handleSearchForm() {
     
@@ -46,27 +57,44 @@ function getWeather(lat,lon){
             var farTemp = weather.list[0].main.temp *(9/5) - 459.67;
             var windNum = weather.list[0].wind.speed;
             var humidityNum = weather.list[0].main.humidity;
-            // var farTemp1 = weather.list[2].main.temp *(9/5) - 459.67;
-            // var windNum1 = weather.list[2].wind.speed;
-            // var humidityNum1 = weather.list[2].main.humidity;
-            // var farTemp2 = weather.list[9].main.temp *(9/5) - 459.67;
-            // var windNum2 = weather.list[9].wind.speed;
-            // var humidityNum2 = weather.list[9].main.humidity;
-            // var farTemp3 = weather.list[17].main.temp *(9/5) - 459.67;
-            // var windNum3 = weather.list[17].wind.speed;
-            // var humidityNum3 = weather.list[17].main.humidity;
-            // var farTemp4 = weather.list[25].main.temp *(9/5) - 459.67;
-            // var windNum4 = weather.list[25].wind.speed;
-            // var humidityNum4 = weather.list[25].main.humidity;
-            // var farTemp5 = weather.list[33].main.temp *(9/5) - 459.67;
-            // var windNum5 = weather.list[33].wind.speed;
-            // var humidityNum5 = weather.list[33].main.humidity;
+            var farTemp1 = weather.list[2].main.temp *(9/5) - 459.67;
+            var windNum1 = weather.list[2].wind.speed;
+            var humidityNum1 = weather.list[2].main.humidity;
+            var farTemp2 = weather.list[9].main.temp *(9/5) - 459.67;
+            var windNum2 = weather.list[9].wind.speed;
+            var humidityNum2 = weather.list[9].main.humidity;
+            var farTemp3 = weather.list[17].main.temp *(9/5) - 459.67;
+            var windNum3 = weather.list[17].wind.speed;
+            var humidityNum3 = weather.list[17].main.humidity;
+            var farTemp4 = weather.list[25].main.temp *(9/5) - 459.67;
+            var windNum4 = weather.list[25].wind.speed;
+            var humidityNum4 = weather.list[25].main.humidity;
+            var farTemp5 = weather.list[33].main.temp *(9/5) - 459.67;
+            var windNum5 = weather.list[33].wind.speed;
+            var humidityNum5 = weather.list[33].main.humidity;
             farTemp = Math.trunc(farTemp);
             console.log(farTemp);
             weatherNow.textContent =  weather.city.name + " on " + today.format("MMM D, YYYY");
             temp.textContent = "Temp: " + farTemp + "°F";
             wind.textContent = "Wind Speeds: " + windNum + " MPH";
             humidity.textContent = "Humidity of: " + humidityNum + " %";
+            temp1.textContent = "Temp: " + Math.trunc(farTemp1) + "°F";
+            wind1.textContent = "Wind Speeds: " + windNum1 + " MPH";
+            humidity1.textContent = "Humidity of: " + humidityNum1 + " %";
+            temp2.textContent = "Temp: " + Math.trunc(farTemp2) + "°F";
+            wind2.textContent = "Wind Speeds: " + windNum2 + " MPH";
+            humidity2.textContent = "Humidity of: " + humidityNum2 + " %";
+            temp3.textContent = "Temp: " + Math.trunc(farTemp3) + "°F";
+            wind3.textContent = "Wind Speeds: " + windNum3 + " MPH";
+            humidity3.textContent = "Humidity of: " + humidityNum3 + " %";
+            temp4.textContent = "Temp: " + Math.trunc(farTemp4) + "°F";
+            wind4.textContent = "Wind Speeds: " + windNum4 + " MPH";
+            humidity4.textContent = "Humidity of: " + humidityNum4 + " %";
+            temp5.textContent = "Temp: " + Math.trunc(farTemp5) + "°F";
+            wind5.textContent = "Wind Speeds: " + windNum5 + " MPH";
+            humidity5.textContent = "Humidity of: " + humidityNum5 + " %";
+            day1.textContent = nextday1.format("MMM D, YYYY")
+            console.log(weather.list[0].weather[0].icon)
 
         })
 
