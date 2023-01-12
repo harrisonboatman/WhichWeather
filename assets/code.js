@@ -30,6 +30,7 @@ var nextday3 = today.add(3,'day');
 var nextday4 = today.add(4,'day');
 var nextday5 = today.add(5,'day');
 var futureFore = document.querySelector('#future-forecast');
+var pastSearch = document.querySelector('#past-search');
 futureFore.style.display = 'none'
 function handleSearchForm() {
     
@@ -129,8 +130,14 @@ function getCoordinates (place) {
                 console.log(longitude);
                 getWeather(latitude,longitude)
             })
-        localStorage.getItem('place')
-       
+        var storedPlace = localStorage.getItem('place')
+        console.log(storedPlace);
+        // for (i=0;i<storedPlace.length; i++){
+        //     var newPlace = document.createElement('p');
+        //     newPlace.textContent = storedPlace[i];
+        //     pastSearch.appendChild(newPlace);
+        // }
+       pastSearch.textContent = storedPlace;
 }
 
 submitBtn.addEventListener('click', handleSearchForm);
