@@ -139,5 +139,12 @@ function getCoordinates (place) {
         // }
        pastSearch.textContent = storedPlace;
 }
-
+var storedPlace = localStorage.getItem('place')
+        console.log(storedPlace);
+        // for (i=0;i<storedPlace.length; i++){
+        //     var newPlace = document.createElement('p');
+        //     newPlace.textContent = storedPlace[i];
+        //     pastSearch.appendChild(newPlace);
+        // }
+       pastSearch.textContent = storedPlace;
 submitBtn.addEventListener('click', handleSearchForm);
