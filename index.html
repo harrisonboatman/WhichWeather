@@ -19,9 +19,9 @@
         <h1 class='col-12 flex-row justify-center text-center text-light'>Which Weather are you picking?</h1>
     </header>
 
-    <main class='container'>
-        <section class='row'>
-            <div class='flex-row col-4 border m-2 p-4 '>
+    <main >
+        <section class='row '>
+            <div class='flex-row col-4 border m-2 p-4 container '>
                 <h2> Search for a city!</h2>
                 <input id='search-input' class='w-100' type='text' placeholder='Search for a city here!'>
                 <button id='submitBtn' class='btn btn-primary w-100 mt-4 mb-4'>Search</button>
@@ -31,11 +31,90 @@
                 </div>
 
             </div>
-            <div id='city-weather' class=' flex-row-reverse col-6 border align-items-end'>
+            <div id='city-weather' class=' flex-row-reverse col-6 border align-items-end container'>
                 <h3 id='city'></h3>
                 <p id = 'temp'></p>
                 <p id = 'wind'></p>
                 <p id = 'humidity'></p>
+            </div>
+            <div id = 'future-forecast' class = 'col-9 border'>
+                <h1>5 Day Forecast: </h1>
+                
+                  <div class=" card shadow-0 border  bg-dark text-light width">
+                    <div class="card-body p-4">
+          
+                      <h4 id = 'day1' class="mb-1 sfw-normal">New York, US</h4>
+                      <p  id = 'day1temp' class="mb-2">Current temperature: <strong>5.42°C</strong></p>
+                      <p id = 'day1wind'>Feels like: <strong>4.37°C</strong></p>
+                      <p id = 'day1humidity'>Max: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong></p>
+          
+                      <div class="d-flex flex-row align-items-center">
+                        <p class="mb-0 me-4">Scattered Clouds</p>
+                        <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
+                      </div>
+          
+                    </div>
+                  </div>
+                  <div class=" card shadow-0 border  bg-dark text-light width">
+                    <div class="card-body p-4">
+          
+                      <h4 id = 'day2' class="mb-1 sfw-normal">New York, US</h4>
+                      <p  id = 'day2temp' class="mb-2">Current temperature: <strong>5.42°C</strong></p>
+                      <p id = 'day2wind'>Feels like: <strong>4.37°C</strong></p>
+                      <p id = 'day2humidity'>Max: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong></p>
+          
+                      <div class="d-flex flex-row align-items-center">
+                        <p class="mb-0 me-4">Scattered Clouds</p>
+                        <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
+                      </div>
+          
+                    </div>
+                  </div>
+                  <div class=" card shadow-0 border  bg-dark text-light width">
+                    <div class="card-body p-4">
+          
+                      <h4 id = 'day3' class="mb-1 sfw-normal">New York, US</h4>
+                      <p  id = 'day3temp' class="mb-2">Current temperature: <strong>5.42°C</strong></p>
+                      <p id = 'day3wind'>Feels like: <strong>4.37°C</strong></p>
+                      <p id = 'day3humidity'>Max: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong></p>
+          
+                      <div class="d-flex flex-row align-items-center">
+                        <p class="mb-0 me-4">Scattered Clouds</p>
+                        <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
+                      </div>
+          
+                    </div>
+                  </div>
+                  <div class=" card shadow-0 border  bg-dark text-light width">
+                    <div class="card-body p-4">
+          
+                      <h4 id = 'day4' class="mb-1 sfw-normal">New York, US</h4>
+                      <p  id = 'day4temp' class="mb-2">Current temperature: <strong>5.42°C</strong></p>
+                      <p id = 'day4wind'>Feels like: <strong>4.37°C</strong></p>
+                      <p id = 'day4humidity'>Max: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong></p>
+          
+                      <div class="d-flex flex-row align-items-center">
+                        <p class="mb-0 me-4">Scattered Clouds</p>
+                        <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
+                      </div>
+          
+                    </div>
+                  </div>
+                  <div class=" card shadow-0 border  bg-dark text-light width">
+                    <div class="card-body p-4">
+          
+                      <h4 id = 'day5' class="mb-1 sfw-normal">New York, US</h4>
+                      <p  id = 'day5temp' class="mb-2">Current temperature: <strong>5.42°C</strong></p>
+                      <p id = 'day5wind'>Feels like: <strong>4.37°C</strong></p>
+                      <p id = 'day5humidity'>Max: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong></p>
+          
+                      <div class="d-flex flex-row align-items-center">
+                        <p class="mb-0 me-4">Scattered Clouds</p>
+                        <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
+                      </div>
+          
+                    </div>
+                  </div>
             </div>
         </section>
 
