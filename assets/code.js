@@ -1,5 +1,6 @@
-var submitBtn = document.querySelector('#submitBtn')
-
+var submitBtn = document.querySelector('#submitBtn');
+var weatherNow = document.querySelector('#city');
+var today = dayjs();
 
 function handleSearchForm() {
     
@@ -23,6 +24,10 @@ function getWeather(lat,lon){
         })
         .then(function(weather){
             console.log(weather);
+            console.log(weather.list[0].main.temp);
+            var farTemp = weather.list[0].main.temp *(9/5) - 459.67;
+            console.log(farTemp);
+            weatherNow.textContent =  weather.city.name + " on " + today.format("MMM D, YYYY");
         })
 
 }
