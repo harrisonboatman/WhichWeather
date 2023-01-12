@@ -29,13 +29,14 @@ var nextday2 = today.add(2,'day');
 var nextday3 = today.add(3,'day');
 var nextday4 = today.add(4,'day');
 var nextday5 = today.add(5,'day');
-console.log(test);
-
+var futureFore = document.querySelector('#future-forecast');
+futureFore.style.display = 'none'
 function handleSearchForm() {
     
 
     var searchEl = document.querySelector('#search-input').value;
     console.log(searchEl);
+    localStorage.setItem('place', searchEl);
 getCoordinates(searchEl);
 }
 
@@ -94,8 +95,12 @@ function getWeather(lat,lon){
             wind5.textContent = "Wind Speeds: " + windNum5 + " MPH";
             humidity5.textContent = "Humidity of: " + humidityNum5 + " %";
             day1.textContent = nextday1.format("MMM D, YYYY")
+            day2.textContent = nextday2.format("MMM D, YYYY")
+            day3.textContent = nextday3.format("MMM D, YYYY")
+            day4.textContent = nextday4.format("MMM D, YYYY")
+            day5.textContent = nextday5.format("MMM D, YYYY")
             console.log(weather.list[0].weather[0].icon)
-
+            futureFore.style.display = 'block'
         })
 
 }
@@ -124,7 +129,7 @@ function getCoordinates (place) {
                 console.log(longitude);
                 getWeather(latitude,longitude)
             })
-        
+        localStorage.getItem('place')
        
 }
 
